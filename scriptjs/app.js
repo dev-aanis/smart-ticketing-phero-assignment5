@@ -31,13 +31,18 @@ for(let btn of seatBtn){
                 inputField.removeAttribute('disabled');
                 const couponApply = document.getElementById('coupon-apply');
                 couponApply.removeAttribute('disabled')
-                const nextButton = document.getElementById('next-button');
-                nextButton.removeAttribute('disabled')
+                // const nextButton = document.getElementById('next-button');
+                // nextButton.removeAttribute('disabled')
                 for(let i=0; i<seatBtn.length; i++){
                     if(!seatBtn[i].disabled){
                         seatBtn[i].disabled=true;
                     }
                 }
+            }
+            const nextButton = document.getElementById('next-button');
+            // nextButton.removeAttribute('disabled');
+            if(selectedButton===1){
+                nextButton.removeAttribute('disabled');
             }
         }
         const selectedContainer = document.getElementById('selected-container')
